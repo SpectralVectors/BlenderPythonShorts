@@ -7,6 +7,12 @@ A Collection of basic scripts to help beginners with Blender Python - bpy
 - [Select or Deselect Objects](#how-to-select-or-deselect-an-object)
 - [Delete Objects](#how-to-delete-objects)
 - [Edit an Object (Basic)](#how-to-edit-objects-basic)
+- [Select a Vertex, Edge or Face](#how-to-select-a-vertex-edge-face)
+- [Edit an Object (Complex)](#how-to-edit-objects-complex)
+- [Create and Assign a Material](#how-to-create-and-assign-a-material)
+- [Create and Edit a Shader Node Tree](#how-to-create-and-edit-a-shader-node-tree)
+- [Activate or Deactivate Addons](#how-to-activate-deactivate-addons)
+- [Add and Edit Modifiers](#how-to-add-and-edit-modifiers)
 
 ## How to Add an Object
 ```python
@@ -110,6 +116,7 @@ bpy.ops.object.gpencil_add(align='WORLD',
                            type='STROKE'
                            )
 ```
+[(back to top)](#table-of-contents)
 
 ## How to Select or Deselect an Object
 ```python
@@ -149,6 +156,7 @@ for object in objects:
 for object in objects:
     object.select_set(False)
 ```
+[(back to top)](#table-of-contents)
 
 ## How to Delete Objects
 ```python
@@ -162,6 +170,7 @@ import bpy
 # Delete
 bpy.ops.object.delete()
 ```
+[(back to top)](#table-of-contents)
 
 ## How to Edit Objects Basic
 ```python
@@ -196,8 +205,9 @@ object.scale = (2,1,1)
 # Set Scale (Add to Current)
 object.delta_scale = (2,1,1)
 ```
+[(back to top)](#table-of-contents)
 
-## How to Select a Vertex, Edge or Face
+## How to Select a Vertex Edge or Face
 ```python
 import bpy
 
@@ -224,8 +234,9 @@ data.polygons[2].select = True
 # Switch Edit/Object Mode
 bpy.ops.object.editmode_toggle()
 ```
+[(back to top)](#table-of-contents)
 
-## How to Edit Objects (Complex)
+## How to Edit Objects Complex
 ```python
 import bpy
 
@@ -246,6 +257,7 @@ bpy.ops.mesh.extrude_region_move(
 
 bpy.ops.mesh.subdivide()
 ```
+[(back to top)](#table-of-contents)
 
 ## How to Create and Assign a Material
 ```python
@@ -276,6 +288,7 @@ bpy.ops.object.material_slot_move(direction='DOWN')
 bpy.ops.object.material_slot_add()
 bpy.ops.object.material_slot_remove()
 ```
+[(back to top)](#table-of-contents)
 
 ## How to Create and Edit a Shader Node Tree
 ```python
@@ -320,6 +333,7 @@ links.new(noise.outputs[0], bsdf.inputs[6])
 # Now we add the material to the active object, otherwise it will be created but not used
 bpy.context.object.data.materials.append(material)
 ```
+[(back to top)](#table-of-contents)
 
 ## How to Activate or Deactivate Addons
 ```python
@@ -333,6 +347,7 @@ bpy.ops.preferences.addon_enable(module="node_arrange")
 # Deactivate
 bpy.ops.preferences.addon_disable(module="node_arrange")
 ```
+[(back to top)](#table-of-contents)
 
 ## How to Add and Edit Modifiers
 ```python
@@ -356,6 +371,7 @@ array.count = 4
 array.relative_offset_displace[0] = 0
 array.relative_offset_displace[1] = 1
 ```
+[(back to top)](#table-of-contents)
 
 ## How to Parent Objects
 ```python
@@ -368,8 +384,9 @@ camera = bpy.data.objects['Camera']
 
 cube.parent = camera
 ```
+[(back to top)](#table-of-contents)
 
-## How to Install Python Libraries to Blender's Python
+## How to Install Python Libraries to Blenders Python
 ```python
 # You MUST run Blender as Administrator for this script to work
 # Right Click on Blender.exe, and choose Run > As Administrator
@@ -398,3 +415,4 @@ for package in packages:
         "--target=C:\\Program Files\\Blender Foundation\\Blender " + version + "\\" + version + "\\python\\lib", 
         package])
 ```
+[(back to top)](#table-of-contents)
