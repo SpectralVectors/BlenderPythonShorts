@@ -36,8 +36,6 @@ bpy.ops.object.armature_add()
 # Grease Pencil Stroke
 bpy.ops.object.gpencil_add()
 
-
-
 # Add Objects - Advanced
 
 # Cube
@@ -104,4 +102,43 @@ bpy.ops.object.gpencil_add(align='WORLD',
                            scale=(1, 1, 1), 
                            type='STROKE'
                            )
+```
+
+## How to Select / Deselect an Object
+```python
+import bpy
+
+'''Select or Deselect the Active Object'''
+# Select
+bpy.context.object.select_set(True)
+
+# Deselect
+bpy.context.object.select_set(False)
+
+
+'''Select or Deselect an Object by Name'''
+# Select
+bpy.data.objects['Cube'].select_set(True)
+
+# Deselect
+bpy.data.objects['Cube'].select_set(False)
+
+
+'''Select or Deselect a Group of Objects'''
+# Create the list of objects to select or deselect
+cube = bpy.data.objects['Cube']
+camera = bpy.data.objects['Camera']
+light = bpy.data.objects['Light']
+
+objects =  (cube,
+            camera,
+            light)
+
+# Select
+for object in objects:
+    object.select_set(True)
+    
+# Deselect
+for object in objects:
+    object.select_set(False)
 ```
