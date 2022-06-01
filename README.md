@@ -4,7 +4,8 @@ A Collection of basic scripts to help beginners with Blender Python - bpy
 ## Table of Contents
 ### How to
 [Add an Object](#how-to-add-an-object)
-[Select / Deselect Objects](#how-to-select-/-deselect-an-object)
+
+[Select / Deselect Objects](#how-to-select-deselect-an-object)
 
 ## How to Add an Object
 ```python
