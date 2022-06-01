@@ -7,7 +7,7 @@ A Collection of basic scripts to help beginners with Blender Python - bpy
 
 [Select Deselect Objects](#how-to-select-or-deselect-an-object)
 
-[Edit an Object (Basic)](#how-to-edit-objects-(basic))
+[Edit an Object (Basic)](#how-to-edit-objects-basic)
 
 ## How to Add an Object
 ```python
@@ -164,7 +164,7 @@ import bpy
 bpy.ops.object.delete()
 ```
 
-## How to Edit Objects (Basic)
+## How to Edit Objects Basic
 ```python
 import bpy
 
