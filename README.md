@@ -7,6 +7,8 @@ A Collection of basic scripts to help beginners with Blender Python - bpy
 
 [Select Deselect Objects](#how-to-select-or-deselect-an-object)
 
+[Edit an Object (Basic)](#how-to-edit-objects-(basic))
+
 ## How to Add an Object
 ```python
 import bpy
@@ -320,7 +322,7 @@ links.new(noise.outputs[0], bsdf.inputs[6])
 bpy.context.object.data.materials.append(material)
 ```
 
-## How to Activate / Deactivate Addons
+## How to Activate or Deactivate Addons
 ```python
 import bpy
 
