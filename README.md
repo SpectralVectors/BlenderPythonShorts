@@ -5,7 +5,7 @@ A Collection of basic scripts to help beginners with Blender Python - bpy
 ### How to
 [Add an Object](#how-to-add-an-object)
 
-[Select Deselect Objects](#how-to-select-/-deselect-an-object)
+[Select Deselect Objects](#how-to-select-or-deselect-an-object)
 
 ## How to Add an Object
 ```python
@@ -110,7 +110,7 @@ bpy.ops.object.gpencil_add(align='WORLD',
                            )
 ```
 
-## How to Select / Deselect an Object
+## How to Select or Deselect an Object
 ```python
 import bpy
 
