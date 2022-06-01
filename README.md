@@ -11,7 +11,7 @@ A Collection of basic scripts to help beginners with Blender Python - bpy
 - [Edit an Object (Complex)](#how-to-edit-objects-complex)
 - [Create and Assign a Material](#how-to-create-and-assign-a-material)
 - [Create and Edit a Shader Node Tree](#how-to-create-and-edit-a-shader-node-tree)
-- [Activate or Deactivate Addons](#how-to-activate-deactivate-addons)
+- [Activate or Deactivate Addons](#how-to-activate-or-deactivate-addons)
 - [Add and Edit Modifiers](#how-to-add-and-edit-modifiers)
 - [Parent Objects](#how-to-parent-objects)
 - [Install Python Libraries to Blender's Python](#how-to-install-python-libraries-to-blenders-python)
