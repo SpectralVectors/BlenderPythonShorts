@@ -11,6 +11,7 @@ A Collection of basic scripts to help beginners with Blender Python - bpy
 - [Edit an Object (Complex)](#how-to-edit-objects-complex)
 - [Create and Assign a Material](#how-to-create-and-assign-a-material)
 - [Create and Edit a Shader Node Tree](#how-to-create-and-edit-a-shader-node-tree)
+- [How to Turn a Function into an Operator](#how-to-turn-a-function-into-an-operator)
 - [Activate or Deactivate Addons](#how-to-activate-or-deactivate-addons)
 - [Add and Edit Modifiers](#how-to-add-and-edit-modifiers)
 - [Parent Objects](#how-to-parent-objects)
@@ -334,6 +335,50 @@ links.new(noise.outputs[0], bsdf.inputs[6])
 
 # Now we add the material to the active object, otherwise it will be created but not used
 bpy.context.object.data.materials.append(material)
+```
+[(back to top)](#table-of-contents)
+
+## How to Turn a Function into an Operator
+```python
+import bpy
+
+# You can rename your Operator to anything you want
+# But make sure it matches the name in your register and unregister functions!
+class SimplestOperator(bpy.types.Operator):
+    
+    # The tooltip is a multiline comment you can use to describe what your
+    # Operator does, it appears when you hover the mouse
+    """Tooltip"""
+    
+    # This tells Blender where the Operator will work and how to call it
+    # This one works in Object mode, it is named simplest_operator
+    # And to call it in code we use: bpy.ops.object.simplest_operator()
+    # Or search for it via the F3 menu
+    bl_idname = "object.simplest_operator"
+    
+    # This is the label that your users will see, the title
+    bl_label = "Simplest Object Operator"
+    
+    # This is the function that will run when we call the Operator
+    def execute(self, context):
+        
+        # Paste your code here
+        
+        return {'FINISHED'}
+
+
+# If you changed the name of your addon above, make sure you change it here, too
+def register():
+    bpy.utils.register_class(SimplestOperator)
+
+
+def unregister():
+    bpy.utils.unregister_class(SimplestOperator)
+
+
+if __name__ == "__main__":
+    register()
+
 ```
 [(back to top)](#table-of-contents)
 
