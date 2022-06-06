@@ -502,9 +502,8 @@ cube.parent = camera
 
 import bpy, subprocess, sys
 
-versionnumber = str(bpy.data.version)
-versionstring = versionnumber.replace(',','.').replace(' ','').replace('(','')
-version = versionstring.rstrip(versionstring[-3:])
+string = bpy.app.version_string
+blenderversion = string.rstrip(string[-2:])
 
 packages = ["shapely", "Equation"]
 
@@ -520,7 +519,7 @@ for package in packages:
     subprocess.check_call([
         sys.executable, 
         "-m", "pip", "install",
-        "--target=C:\\Program Files\\Blender Foundation\\Blender " + version + "\\" + version + "\\python\\lib", 
+        f"--target=C:\\Program Files\\Blender Foundation\\Blender {blenderversion}\\{blenderversion}\\python\\lib", 
         package])
 ```
 [(back to top)](#table-of-contents)
