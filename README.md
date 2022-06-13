@@ -13,7 +13,7 @@ A Collection of basic scripts to help beginners with Blender Python - bpy
 - [Create and Assign a Material](#how-to-create-and-assign-a-material)
 - [Create and Edit a Shader Node Tree](#how-to-create-and-edit-a-shader-node-tree)
 - [Turn a Function into an Operator](#how-to-turn-a-function-into-an-operator)
-- [Setup a simple UI Panel](#how-to-setup-a-simple-ui-panel)
+- [Setup a UI Panel](#how-to-setup-a-ui-panel)
 - [Activate or Deactivate Addons](#how-to-activate-or-deactivate-addons)
 - [Add and Edit Modifiers](#how-to-add-and-edit-modifiers)
 - [Parent Objects](#how-to-parent-objects)
@@ -444,7 +444,7 @@ if __name__ == "__main__":
 ```
 [(back to top)](#table-of-contents)
 
-## How to Setup a Simple UI Panel
+## How to Setup a UI Panel
 ```python
 import bpy
 
