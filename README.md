@@ -19,6 +19,7 @@ A Collection of basic scripts to help beginners with Blender Python - bpy
 - [Add and Edit Modifiers](#how-to-add-and-edit-modifiers)
 - [Parent Objects](#how-to-parent-objects)
 - [Install Python Libraries to Blender's Python](#how-to-install-python-libraries-to-blenders-python)
+- [Get the VSCode extension working in Blender 3 and up](#how-to-get-the-vscode-extension-working-in-blender-3-and-up)
 
 ## How to Add an Object
 ```python
@@ -839,6 +840,46 @@ string = bpy.app.version_string
 blenderversion = string.rstrip(string[-2:])
 
 packages = ["shapely", "Equation"]
+
+subprocess.check_call([
+    sys.executable, 
+    "-m", "ensurepip"])
+
+subprocess.check_call([
+    sys.executable, 
+    "-m", "pip", "install", "--upgrade", "pip"])
+
+for package in packages:
+    subprocess.check_call([
+        sys.executable, 
+        "-m", "pip", "install",
+        f"--target=C:\\Program Files\\Blender Foundation\\Blender {blenderversion}\\{blenderversion}\\python\\lib", 
+        package])
+```
+[(back to top)](#table-of-contents)
+
+
+## How to Get the VSCode Extension working in Blender 3 and up
+```python
+# You MUST run Blender as Administrator for this script to work
+# Right Click on Blender.exe, and choose Run > As Administrator
+# Otherwise you will get a Permission Error and the script will fail
+
+import bpy, subprocess, sys
+
+string = bpy.app.version_string
+blenderversion = string.rstrip(string[-2:])
+
+packages = [
+    'Werkzeug', 
+    'MarkupSafe', 
+    'itsdangerous', 
+    'colorama', 
+    'Jinja2', 
+    'click', 
+    'flask', 
+    'debugpy', 
+    ]
 
 subprocess.check_call([
     sys.executable, 
