@@ -878,7 +878,8 @@ packages = [
     'Jinja2', 
     'click', 
     'flask', 
-    'debugpy', 
+    'debugpy',
+    'requests',
     ]
 
 subprocess.check_call([
